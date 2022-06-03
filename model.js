@@ -97,7 +97,9 @@ module.exports.createOrder = async (order) => {
   order.status = "PENDING"
   order.total = 0;
   order.food.forEach(e => {
-    order.total+= e.price * e.quantity;
+    if(e.amount)e.quantity = e.amount;
+    order.total+= e.quantity * e.price;
+    
   });
   await Order.insertMany(order);
 }

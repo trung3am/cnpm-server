@@ -74,7 +74,7 @@ app.get('/order', async (req,res)=> {
 })
 
 app.post('/createorder', async (req,res)=> {
-  const order = req.body.order;
+  const order = req.body;
   if(!order || !order.food){
     res.status(400).send("bad request")
     return;

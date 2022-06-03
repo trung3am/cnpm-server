@@ -43,7 +43,7 @@ async function seedtable() {
 // Table.deleteMany({}).then(console.log("OK")).catch(e=>console.log(e))
 
 // seedtable()
-
+seedfood()
 async function a () {
   try {
     const a = await Food.findById("62907e298a39de129dcf5487")
@@ -53,4 +53,4 @@ async function a () {
   }
 }
 
-a()
+// a()
