@@ -5,6 +5,7 @@ var OrderSchema = new mongoose.Schema({
     username: String,
     status: String,
     total: Number,
+    createdAt: String,
     food: Array
 });
 

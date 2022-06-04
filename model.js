@@ -101,6 +101,8 @@ module.exports.createOrder = async (order) => {
     order.total+= e.quantity * e.price;
     
   });
+  const date = new Date(Date.now())
+  order.createdAt = date.toString();
   await Order.insertMany(order);
 }
 
